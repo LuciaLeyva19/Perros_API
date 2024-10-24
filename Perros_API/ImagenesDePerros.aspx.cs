@@ -37,9 +37,9 @@ namespace Perros_API
             {
                 using (StreamReader lector = new StreamReader(respuesta.GetResponseStream()))
                 {
-                    string cuerpoRespuesta = lector.ReadToEnd();
+                    string ImagenRespuesta = lector.ReadToEnd();
 
-                    JObject json = JObject.Parse(cuerpoRespuesta);
+                    JObject json = JObject.Parse(ImagenRespuesta);
                     string urlImagen = json["message"].ToString();
 
                     imgPerro.ImageUrl = urlImagen;
